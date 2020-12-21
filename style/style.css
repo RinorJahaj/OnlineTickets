@@ -1,0 +1,281 @@
+:root {
+  --primary-color: #047aed;
+  --white-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Utils */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  /* padding: 0 2.5rem; */
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  font-size: 1.8rem;
+  background-color: #047aed;
+  border-radius: 20px;
+  padding: 0.8rem 1.8rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.pb-min {
+  padding-bottom: 0.8rem;
+}
+
+.pb-1 {
+  padding-bottom: 1.2rem;
+}
+
+.pb-3 {
+  padding-bottom: 3rem;
+}
+
+.pb-5 {
+  padding-bottom: 5rem;
+}
+
+.pt-min {
+  padding-top: 0.8rem;
+}
+
+.pt-1 {
+  padding-top: 1.2rem;
+}
+
+.pt-3 {
+  padding-top: 3rem;
+}
+
+.pt-5 {
+  padding-top: 5rem;
+}
+
+.center {
+  text-align: center;
+}
+/* navbar */
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  height: 70px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: var(--white-color);
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px var(--white-color) solid;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.flex__2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* showcase */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase-text p {
+  font-size: 1.4rem;
+}
+
+/* info */
+.info p {
+  padding: 1rem 3rem;
+}
+
+/* presentatin */
+.presentation {
+  background-color: rgb(247, 238, 238);
+}
+
+/* users */
+.users {
+  position: relative;
+  background-color: rgb(247, 238, 238);
+  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%); */
+  /* clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%); */
+}
+
+.user {
+  background-color: var(--white-color);
+  padding: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.user__img {
+  width: 250px;
+}
+
+/* Testing */
+.slide {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+  display: block;
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+
+.buttons button {
+  border: 2px solid #fff;
+  background-color: #333;
+  color: #f7eeee;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* team  */
+.team {
+  display: grid;
+  place-items: center center;
+  height: 35vh;
+  background: url("../img/koncert.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 2rem;
+  color: #fff;
+}
+/* .sliders {
+  background-color: rgb(247, 238, 238);
+  position: relative;
+}
+.sliders__navigation {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliders__navigation li {
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.sliders__navigation li img {
+  width: 80px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+} */
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .showcase {
+    text-align: center;
+  }
+
+  .users .grid {
+    place-items: center;
+  }
+
+  .infos {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 300px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  .showcase {
+    text-align: center;
+  }
+}
